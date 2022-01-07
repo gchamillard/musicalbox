@@ -1,0 +1,18 @@
+extends layout
+
+block content
+
+  section(class='wrapper style1')
+    div.container
+      div#content
+
+        article
+          header
+            h2
+              img(src='/images/musicalbox.png' width='64' lenght='64' alt='')
+              span Liste des musiques
+            ul.links
+            each val in tabMusiques
+              li
+                a(href='/liste/'+val class='button alt')= val
+                hr
